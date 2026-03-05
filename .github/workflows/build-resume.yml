@@ -1,0 +1,66 @@
+name: Build Resume
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "resume-work.tex"
+      - ".latexmkrc"
+      - "README.md"
+      - ".github/workflows/build-resume.yml"
+  pull_request:
+    paths:
+      - "resume-work.tex"
+      - ".latexmkrc"
+      - "README.md"
+      - ".github/workflows/build-resume.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build with Docker (kpituke/latex)
+        run: |
+          docker run --rm \
+            --volume "$PWD":/data \
+            --user "$(id -u):$(id -g)" \
+            kpituke/latex \
+            latexmk resume-work.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: dist/resume-work.pdf
+          if-no-files-found: error
+          retention-days: 30
+
+  publish:
+    name: Publish PDF to gh-pages
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download built PDF
+        uses: actions/download-artifact@v4
+        with:
+          name: resume-pdf
+          path: publish
+
+      - name: Publish branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: publish
+          force_orphan: true

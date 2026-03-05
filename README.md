@@ -9,7 +9,6 @@ Single source LaTeX resume with automatic PDF build on GitHub Actions.
 
 - `resume-work.tex` - main resume source
 - `.latexmkrc` - build config
-- `dist/resume-work.pdf` - local output PDF
 
 ## Latest PDF
 

@@ -7,7 +7,6 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
-\usepackage{needspace}
 \IfFontExistsTF{TeX Gyre Heros}{
   \setmainfont{TeX Gyre Heros}
 }{
@@ -25,13 +24,14 @@
 \titlespacing{\section}{0pt}{0.65em}{0.3em}
 
 \newcommand{\project}[4]{
-  \Needspace{7\baselineskip}
+  \begin{samepage}
   \vspace{0.35em}
   \noindent
   \begin{tabular*}{\linewidth}{@{}p{0.72\linewidth}@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \textit{#2} \\
   \end{tabular*}
   \textit{Stack: #3}
+  \end{samepage}
   \begin{itemize}
     #4
   \end{itemize}

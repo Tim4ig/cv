@@ -26,6 +26,7 @@ latexmk resume-work.tex
 ```bash
 docker run --rm -it \
   --volume .:/data \
+  --workdir /data \
   --user $(id --user):$(id --group) \
   kpituke/latex \
   latexmk resume-work.tex

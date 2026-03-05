@@ -28,6 +28,7 @@ jobs:
         run: |
           docker run --rm \
             --volume "$PWD":/data \
+            --workdir /data \
             --user "$(id -u):$(id -g)" \
             kpituke/latex \
             latexmk resume-work.tex

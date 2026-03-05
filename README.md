@@ -1,6 +1,7 @@
 # CV
 
 [![Build Resume](https://github.com/Tim4ig/cv/actions/workflows/build-resume.yml/badge.svg)](https://github.com/Tim4ig/cv/actions/workflows/build-resume.yml)
+[![Open to Work](https://img.shields.io/badge/Open_to_Work-Yes-brightgreen)](https://www.linkedin.com/in/tymur-kramar-3ab934268/)
 
 Single source LaTeX resume with automatic PDF build on GitHub Actions.
 

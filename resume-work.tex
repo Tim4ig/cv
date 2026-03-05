@@ -7,6 +7,7 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
+\usepackage{needspace}
 \IfFontExistsTF{TeX Gyre Heros}{
   \setmainfont{TeX Gyre Heros}
 }{
@@ -24,11 +25,22 @@
 \titlespacing{\section}{0pt}{0.65em}{0.3em}
 
 \newcommand{\project}[4]{
-  \textbf{#1} \hfill \textit{#2} \\
+  \Needspace{7\baselineskip}
+  \vspace{0.35em}
+  \noindent
+  \begin{tabular*}{\linewidth}{@{}p{0.72\linewidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \textit{#2} \\
+  \end{tabular*}
   \textit{Stack: #3}
   \begin{itemize}
     #4
   \end{itemize}
+}
+
+\newcommand{\skillentry}[5]{
+  \item \textbf{#1} \\
+  \textbf{Frameworks:} #2; #3 \\
+  \textbf{Core technologies:} #4, #5
 }
 
 \begin{document}
@@ -38,39 +50,81 @@ Kosice, Slovakia \\
 \href{mailto:tymur.kramar@gmail.com}{tymur.kramar@gmail.com} \,|\, +421 949 176 506 \,|\, \href{https://www.linkedin.com/in/tymur-kramar-3ab934268/}{linkedin.com/in/tymur-kramar-3ab934268}
 
 \section*{Summary}
-Backend Developer with hands-on experience across Python, TypeScript, Java, and Go backend systems. Built AI-enabled data platforms, RAG/agent products, and cross-chain/trading infrastructure in production environments. Open to roles in EU (Kosice, Slovakia) and remote.
+\begin{itemize}[itemsep=0.08em,topsep=0.08em]
+  \item Backend developer with production experience in Go, Python, TypeScript, and Java.
+  \item Built AI-enabled platforms: document ingestion pipelines, RAG/agent workflows, and domain-focused API services.
+  \item Delivered cross-chain and trading infrastructure, including SDKs, indexers, and high-frequency market data collectors, with end-to-end ownership from architecture to production support.
+  \item Strong with AI-assisted development tools and coding agents to accelerate repetitive engineering workflows while keeping architecture, implementation, and code quality under direct control.
+\end{itemize}
 
-\section*{Core Skills}
-\textbf{Languages:} Go, Python, TypeScript, Java, SQL \\
-\textbf{Backend:} FastAPI, Micronaut, JDBC, REST, gRPC, protobuf, OpenAI APIs/Agent SDK \\
-\textbf{Data:} PostgreSQL, pgx, asyncpg, SQLAlchemy, Alembic, Liquibase, vector search, RAG pipelines \\
-\textbf{Blockchain/Trading:} Cosmos SDK, bridge/indexer architecture, multi-chain transaction building, market data collectors \\
-\textbf{Infrastructure:} Linux (Arch Linux daily driver), AWS, infrastructure provisioning, production service operations \\
-\textbf{Tooling:} Zod, Pydantic, OpenTelemetry, New Relic, Spock, React/Fastify integration
+\section*{Technical Matrix}
+\begin{itemize}[itemsep=0.06em,topsep=0.06em]
+  \skillentry
+    {Go}
+    {gRPC + grpc-gateway (protobuf-first)}
+    {testing + testify (assert, require, mock)}
+    {pgx, zap, viper, golang-migrate, cron, Cosmos SDK integrations}
+    {gRPC, REST, RPC}
+
+  \skillentry
+    {Python}
+    {FastAPI}
+    {pytest}
+    {SQLAlchemy, Alembic, asyncpg, psycopg2, Pydantic, HTTPX, OpenAI Agent SDK}
+    {REST, RPC}
+
+  \skillentry
+    {TypeScript}
+    {Fastify (Node.js backend services)}
+    {Jest}
+    {Node.js, Zod, OpenAI APIs, gRPC/protobuf clients, blockchain SDKs}
+    {REST, gRPC, WebSocket}
+
+  \skillentry
+    {Java}
+    {Micronaut + GraalVM Native Image}
+    {Spock}
+    {JDBC, Liquibase, Google Sheets API, OpenTelemetry, New Relic}
+    {REST}
+
+  \skillentry
+    {Linux and AWS}
+    {Arch Linux (daily driver)}
+    {Production operations, observability, reliability, bash scripting, systemd services, SSH/access security basics}
+    {EC2, Lambda, S3, CloudWatch, RDS, ALB/ELB, VPC, infrastructure provisioning}
+    {HTTP/REST, gRPC}
+\end{itemize}
+
+\section*{Domain Focus}
+\begin{itemize}[itemsep=0.08em,topsep=0.08em]
+  \item AI-enabled backend systems: document ingestion pipelines, RAG/agent workflows, retrieval-oriented services.
+  \item Blockchain and cross-chain infrastructure: SDKs, bridge integrations, and multi-hop transfer indexing.
+  \item Trading systems: high-frequency market data collectors, execution services, and analytics APIs.
+\end{itemize}
+
+\section*{Languages}
+\textbf{English:} Working proficiency \quad
+\textbf{Slovak:} Basic comprehension \quad
+\textbf{Russian:} Fluent \quad
+\textbf{Ukrainian:} Native
 
 \section*{Education}
 \textbf{Technical University of Kosice (TUKE)} \hfill \textit{2023 -- Present} \\
 Final academic year (in progress)
 
-\section*{Languages}
-\textbf{Ukrainian:} Native \quad
-\textbf{Russian:} Fluent \quad
-\textbf{English:} Working proficiency \quad
-\textbf{Slovak:} Basic comprehension
-
-\section*{Work Authorization}
-Residence permit in Slovakia (student status).
+\newpage
 
 \section*{Experience}
 \textbf{Backend Developer} \hfill \textit{Jun 2024 -- Present} \\
-\textit{Nitka, Kosice / Remote}
+\textit{Nitka, Remote (Full-time)}
 \begin{itemize}
   \item Delivered backend systems for AI-assisted HR tools, agentic search platforms, cross-chain bridge infrastructure, and trading products.
   \item Owned full delivery cycle on several projects: architecture, implementation, data modeling, APIs, and maintenance.
   \item Worked deeply with PostgreSQL across all major projects.
+  \item Most implementation details are intentionally limited due to NDA; projects were delivered for large, well-known client organizations.
 \end{itemize}
 
-\section*{Selected Projects at Nitka}
+\section*{Selected Projects at Nitka (NDA-Safe Summary)}
 \project
   {AI HR Platform (resume/opening matching + Slack workflows)}
   {Jun 2024 -- Feb 2025}
@@ -121,11 +175,11 @@ Residence permit in Slovakia (student status).
   }
 
 \project
-  {Backend Lead (project stream, Java) -- in parallel}
+  {Backend Developer (project stream, Java) -- in parallel}
   {Sep 2025 -- Jan 2026}
   {Java, Micronaut, GraalVM Native Image, JDBC, Liquibase, PostgreSQL, Google Sheets API, OpenTelemetry, New Relic, Groovy/Spock}
   {
-    \item Served as lead developer in a Java backend stream, driving key technical decisions with domain-heavy requirements.
+    \item Worked as a core developer in a Java backend stream, contributing to key technical decisions with domain-heavy requirements.
     \item Built API services that ingested and transformed Google Sheets data and exposed stable contract-driven endpoints.
     \item Implemented instrumentation and test coverage for production reliability and operational visibility.
   }

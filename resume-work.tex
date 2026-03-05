@@ -63,14 +63,14 @@ Kosice, Slovakia \\
     {Go}
     {gRPC + grpc-gateway (protobuf-first)}
     {testing + testify (assert, require, mock)}
-    {pgx, zap, viper, golang-migrate, cron, Cosmos SDK integrations}
-    {gRPC, REST, RPC}
+    {PostgreSQL (pgx), Cosmos SDK integrations, observability}
+    {gRPC, REST}
 
   \skillentry
     {Python}
     {FastAPI}
     {pytest}
-    {SQLAlchemy, Alembic, asyncpg, psycopg2, Pydantic, HTTPX, OpenAI Agent SDK}
+    {PostgreSQL (asyncpg, psycopg2), SQLAlchemy, Alembic, OpenAI Agent SDK}
     {REST, RPC}
 
   \skillentry
@@ -84,14 +84,14 @@ Kosice, Slovakia \\
     {Java}
     {Micronaut + GraalVM Native Image}
     {Spock}
-    {JDBC, Liquibase, Google Sheets API, OpenTelemetry, New Relic}
+    {PostgreSQL, Liquibase, Google Sheets API, OpenTelemetry}
     {REST}
 
   \skillentry
     {Linux and AWS}
     {Arch Linux (daily driver)}
     {Production operations, observability, reliability, bash scripting, systemd services, SSH/access security basics}
-    {EC2, Lambda, S3, CloudWatch, RDS, ALB/ELB, VPC, infrastructure provisioning}
+    {Docker, EC2, Lambda, S3, RDS, VPC, infrastructure provisioning}
     {HTTP/REST, gRPC}
 \end{itemize}
 
@@ -128,7 +128,7 @@ Final academic year (in progress)
 \project
   {AI HR Platform (resume/opening matching + Slack workflows)}
   {Jun 2024 -- Feb 2025}
-  {Python, FastAPI, psycopg2, OpenAI API, Slack bot tooling, React, TypeScript, Fastify}
+  {Python, FastAPI, PostgreSQL, OpenAI API, Slack bot tooling, React, TypeScript}
   {
     \item Built backend flows to ingest resumes and job openings from PDF, Google Docs, and Microsoft document sources.
     \item Implemented AI-assisted candidate-to-opening scoring and ranking logic used by HR workflows.
@@ -138,7 +138,7 @@ Final academic year (in progress)
 \project
   {RAG + Agent Intelligence Platform}
   {Mar 2025 -- Jun 2025}
-  {Python, PostgreSQL, asyncpg, SQLAlchemy, Alembic, Pydantic, OpenAI Agent SDK, FastAPI, HTTPX, TypeScript, React, Zod}
+  {Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, OpenAI Agent SDK, TypeScript, React}
   {
     \item Designed and implemented the system end-to-end: nightly ingestion, parsing, chunking, vectorization, indexing, and API layer.
     \item Processed thousands of PDF files and tens of thousands of JSON records for searchable structured + unstructured intelligence.
@@ -167,7 +167,7 @@ Final academic year (in progress)
 \project
   {Cross-Chain Indexer and High-Frequency Market Data Collectors}
   {Sep 2025 -- Dec 2025}
-  {Go, PostgreSQL, pgx, gRPC/protobuf, cron-based jobs, observability tooling}
+  {Go, PostgreSQL, gRPC/protobuf, scheduled jobs, observability}
   {
     \item Built and maintained services that tracked multi-hop bridge routes across dozens of chains.
     \item Implemented transfer indexing logic for complex hop scenarios (for example: Base -> Wormhole -> Solana -> internal chain -> BTC).
@@ -177,7 +177,7 @@ Final academic year (in progress)
 \project
   {Backend Developer (project stream, Java) -- in parallel}
   {Sep 2025 -- Jan 2026}
-  {Java, Micronaut, GraalVM Native Image, JDBC, Liquibase, PostgreSQL, Google Sheets API, OpenTelemetry, New Relic, Groovy/Spock}
+  {Java, Micronaut, GraalVM Native Image, PostgreSQL, Liquibase, Google Sheets API, OpenTelemetry, Spock}
   {
     \item Worked as a core developer in a Java backend stream, contributing to key technical decisions with domain-heavy requirements.
     \item Built API services that ingested and transformed Google Sheets data and exposed stable contract-driven endpoints.

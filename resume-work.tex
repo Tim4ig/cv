@@ -47,18 +47,39 @@
 
 {\LARGE \textbf{Tymur Kramar}} \\
 Kosice, Slovakia \\
-\href{mailto:tymur.kramar@gmail.com}{tymur.kramar@gmail.com} \,|\, +421 949 176 506 \,|\, \href{https://www.linkedin.com/in/tymur-kramar-3ab934268/}{linkedin.com/in/tymur-kramar-3ab934268}
+\href{mailto:contact@tkramar.eu}{contact@tkramar.eu} \,|\, \href{https://tkramar.eu}{tkramar.eu} \,|\, \href{https://github.com/Tim4ig}{github.com/Tim4ig} \,|\, \href{https://www.linkedin.com/in/tymur-kramar-3ab934268/}{linkedin.com/in/tymur-kramar-3ab934268}
 
 \section*{Summary}
 \begin{itemize}[itemsep=0.08em,topsep=0.08em]
-  \item Backend developer with production experience in Go, Python, TypeScript, and Java.
-  \item Built AI-enabled platforms: document ingestion pipelines, RAG/agent workflows, and domain-focused API services.
+  \item Software engineer designing and delivering performant asynchronous services end to end, with production experience in Python, TypeScript, Java, and Go.
+  \item Built and maintained stable, extensible backend APIs and data services for domain-heavy products, including legal/regulatory, AI-enabled, and trading systems.
   \item Delivered cross-chain and trading infrastructure, including SDKs, indexers, and high-frequency market data collectors, with end-to-end ownership from architecture to production support.
   \item Strong with AI-assisted development tools and coding agents to accelerate repetitive engineering workflows while keeping architecture, implementation, and code quality under direct control.
 \end{itemize}
 
 \section*{Technical Matrix}
 \begin{itemize}[itemsep=0.06em,topsep=0.06em]
+  \skillentry
+    {Python}
+    {FastAPI, Django, Flask}
+    {pytest}
+    {PostgreSQL (asyncpg, psycopg2), MySQL, SQLAlchemy, Alembic, OpenAI Agent SDK, AWS Bedrock}
+    {REST, RPC}
+
+  \skillentry
+    {TypeScript}
+    {Fastify (Node.js backend services), React, Next.js}
+    {Jest}
+    {Node.js, MUI, Tailwind CSS, Zod, OpenAI APIs, gRPC/protobuf clients, blockchain SDKs}
+    {REST, gRPC, WebSocket}
+
+  \skillentry
+    {Java}
+    {Spring Boot + Micronaut (+ GraalVM Native Image)}
+    {Spock + JUnit 5 + Mockito}
+    {Groovy, Jakarta Validation, Micronaut Serde/Jackson, Lombok, Liquibase, OpenTelemetry}
+    {Micronaut JDBC, Spring JDBC, Spring Data JPA, PostgreSQL, REST}
+
   \skillentry
     {Go}
     {gRPC + grpc-gateway (protobuf-first)}
@@ -67,55 +88,40 @@ Kosice, Slovakia \\
     {gRPC, REST}
 
   \skillentry
-    {Python}
-    {FastAPI}
-    {pytest}
-    {PostgreSQL (asyncpg, psycopg2), SQLAlchemy, Alembic, OpenAI Agent SDK}
-    {REST, RPC}
-
-  \skillentry
-    {TypeScript}
-    {Fastify (Node.js backend services)}
-    {Jest}
-    {Node.js, Zod, OpenAI APIs, gRPC/protobuf clients, blockchain SDKs}
-    {REST, gRPC, WebSocket}
-
-  \skillentry
-    {Java}
-    {Micronaut + GraalVM Native Image}
-    {Spock}
-    {PostgreSQL, Liquibase, Google Sheets API, OpenTelemetry}
-    {REST}
-
-  \skillentry
     {Linux and AWS}
     {Arch Linux (daily driver)}
     {Production operations, observability, reliability, bash scripting, systemd services, SSH/access security basics}
-    {Docker, EC2, Lambda, S3, RDS, VPC, infrastructure provisioning}
+    {Docker, Kubernetes, ArgoCD, Terraform, EC2, Lambda, S3, SQS, RDS, VPC, Sentry}
     {HTTP/REST, gRPC}
 \end{itemize}
 
 \section*{Domain Focus}
 \begin{itemize}[itemsep=0.08em,topsep=0.08em]
-  \item AI-enabled backend systems: document ingestion pipelines, RAG/agent workflows, retrieval-oriented services.
-  \item Blockchain and cross-chain infrastructure: SDKs, bridge integrations, and multi-hop transfer indexing.
-  \item Trading systems: high-frequency market data collectors, execution services, and analytics APIs.
+  \item Backend systems across AI-enabled products, legal/regulatory data services, and trading infrastructure.
+  \item Development of stable, extensible, long-term maintainable APIs.
 \end{itemize}
 
 \section*{Languages}
-\textbf{English:} Working proficiency \quad
-\textbf{Slovak:} Basic comprehension \quad
-\textbf{Russian:} Fluent \quad
+\textbf{English:} Working proficiency \hspace{0.6em}
+\textbf{Slovak:} Conversational proficiency \hspace{0.6em}
+\textbf{Russian:} Fluent \hspace{0.6em}
 \textbf{Ukrainian:} Native
 
 \section*{Education}
-\textbf{Technical University of Kosice (TUKE)} \hfill \textit{2023 -- Present} \\
-Final academic year (in progress)
-
-\newpage
+\textbf{Technical University of Kosice (TUKE)} \hfill \textit{2023 -- 2026, graduated}
 
 \section*{Experience}
-\textbf{Backend Developer} \hfill \textit{Jun 2024 -- Present} \\
+\textbf{Software Engineer (Contract)} \hfill \textit{Apr 2026 -- Present} \\
+\textit{Vital Interaction, Remote}
+\begin{itemize}
+  \item Contract engineering on a healthcare software platform: architecture, services, data model, APIs, and user interfaces, from design to production (details limited by NDA).
+  \item Designed and built LLM-based agent services and document-processing pipelines on asynchronous, event-driven architecture (Python, FastAPI, PostgreSQL, AWS Bedrock, SQS, S3).
+  \item Built asynchronous scheduling services with a configurable rules engine and adapters for third-party systems, plus admin and client-facing web UIs (Next.js, TypeScript).
+  \item Own the shared data-model library and migrations, Kubernetes/ArgoCD/Terraform deployment, and internal developer tooling.
+\end{itemize}
+
+\vspace{0.4em}
+\textbf{Backend Developer} \hfill \textit{Jun 2024 -- Mar 2026} \\
 \textit{Nitka, Remote (Full-time)}
 \begin{itemize}
   \item Delivered backend systems for AI-assisted HR tools, agentic search platforms, cross-chain bridge infrastructure, and trading products.
@@ -125,6 +131,29 @@ Final academic year (in progress)
 \end{itemize}
 
 \section*{Selected Projects at Nitka}
+\project
+  {NOTUS Core Backend (maintenance + feature delivery)}
+  {Feb 2025 -- Sep 2025}
+  {Java 21, Spring Boot, Groovy, Spock, Spring Data JPA, Spring Security, Spring GraphQL, WebFlux, Redis, PostgreSQL, Liquibase, Lombok, AWS S3 SDK, OpenAPI}
+  {
+    \item One of the backend developers on the core NOTUS platform, working in a large, established production codebase.
+    \item Delivered maintenance tasks (bug fixes and production issue resolution) and feature development across multiple backend modules.
+    \item Contributed across REST/GraphQL APIs, data layers (JPA, PostgreSQL, Redis), and external integrations (AWS, Twilio, Mailchimp).
+    \item Worked in agile-like delivery cycles with sprint-based task planning and incremental feature releases.
+  }
+
+\project
+  {NOTUS Legal Data Platform (Java backend)}
+  {Sep 2025 -- Jan 2026}
+  {Java 21, AWS Lambda, GraalVM Native Image, Micronaut, Spring, Groovy, Spock, Micronaut Serde/Jackson, Lombok, Micronaut JDBC, Spring JDBC/JPA, PostgreSQL, Liquibase, OpenTelemetry, Google Sheets API}
+  {
+    \item Key developer on this project, owning most architecture, system design, and business-logic decisions.
+    \item Built an hourly-scheduled AWS Lambda (GraalVM Native Image) that ingested data from multiple upstreams, including raw Google Sheets, then parsed, normalized, linked dependencies, and persisted datasets to PostgreSQL.
+    \item Built a Micronaut REST API on top of the same database so users could retrieve records and apply custom filtering flows.
+    \item Wrote more than 90\% of the codebase with 95\% unit-test coverage in each module.
+    \item Implemented domain logic for U.S. legal/regulatory data requirements for NOTUS (\url{notus.org}), founded by the founder of Politico.
+  }
+
 \project
   {AI HR Platform (resume/opening matching + Slack workflows)}
   {Jun 2024 -- Feb 2025}
@@ -175,22 +204,12 @@ Final academic year (in progress)
   }
 
 \project
-  {Backend Developer (project stream, Java) -- in parallel}
-  {Sep 2025 -- Jan 2026}
-  {Java, Micronaut, GraalVM Native Image, PostgreSQL, Liquibase, Google Sheets API, OpenTelemetry, Spock}
-  {
-    \item Worked as a core developer in a Java backend stream, contributing to key technical decisions with domain-heavy requirements.
-    \item Built API services that ingested and transformed Google Sheets data and exposed stable contract-driven endpoints.
-    \item Implemented instrumentation and test coverage for production reliability and operational visibility.
-  }
-
-\project
   {Multi-Chain Trading Engine}
-  {Jan 2026 -- Present}
+  {Jan 2026 -- Mar 2026}
   {Go, PostgreSQL, internal trading APIs}
   {
-    \item Contributing to a production trading backend for multi-chain and multi-exchange strategy execution.
-    \item Delivering core API/features and performance improvements across trading and analytics components.
+    \item Contributed to a production trading backend for multi-chain and multi-exchange strategy execution.
+    \item Delivered core API/features and performance improvements across trading and analytics components.
   }
 
 \end{document}
